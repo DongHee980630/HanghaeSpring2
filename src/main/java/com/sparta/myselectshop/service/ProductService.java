@@ -38,6 +38,7 @@ public class ProductService {
     public ProductResponseDto createProduct(ProductRequestDto requestDto, HttpServletRequest request) {
         // Request에서 Token 가져오기
         String token = jwtUtil.resolveToken(request);
+        //payload : 클레임을 포함한다. 즉, 클라이언트에 대한 정보가 담겨있음
         Claims claims;
 
         // 토큰이 있는 경우에만 관심상품 추가 가능
